@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 const config = require('./config.json');
-const { prefix, token } = require('./config.json');
 const fs = require('fs');
 const bot = new Discord.Client();
+var botStatus = config.bot.status.mode;
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 bot.on('ready', async () => {
@@ -18,7 +18,7 @@ bot.on('ready', async () => {
         console.log('Message logging is not enabled!')
     }
     console.log('----[STARTING SHARDS]----')
-    bot.user.setStatus('dnd');
+    bot.user.setStatus(botStatus);
     function StartShards() {
         fs.readdir("./commands/", (err, files) => {
             if(err) console.log(err);
