@@ -1,0 +1,20 @@
+body {
+    background: radial-gradient(circle,var(--bg-1) 0,var(--bg-2) 100%)!important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Whitney-Semibold Regular,Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: white;
+}
+h1 {
+    margin: 10px 0;
+    font-size: 56px !important;
+    color: var(--primary);
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+.title {
+    text-align: center;
+}
