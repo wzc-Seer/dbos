@@ -57,16 +57,18 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     const req = await GuildModel.findOne({ id: message.guild.id })
     if(!req){
-        const doc = new GuildModel({ id: message.guild.id })
-        await doc.save();
+        const init = new GuildModel({ id: message.guild.id })
+        await init.save();
+
+        const oprix = config.bot.prefix;
     } else {
-        var doc = req;
+        var oprix = req.prefix;
     }
-    if(!message.content.startsWith(doc.prefix)) return;
-    let args = message.content.slice(doc.prefix.length).trim().split(/ +/g);
+    if(!message.content.startsWith(oprix)) return;
+    let args = message.content.slice(oprix.length).trim().split(/ +/g);
     let cmd;
     cmd = args.shift().toLocaleLowerCase();
-    let commandfile = bot.commands.get(cmd.slice(doc.prefix.length));
+    let commandfile = bot.commands.get(cmd.slice(oprix.length));
     if(commandfile) commandfile.run(bot, message, args);
     if(config.bot.commandLogging == true){console.log('CL ->' + message.content + ' command used in: [' + message.guild.name + '] - By: ' + messageAuthor)}
     if(bot.commands.has(cmd)) {
