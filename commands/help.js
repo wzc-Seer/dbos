@@ -14,13 +14,7 @@ module.exports.run = async (bot, message, args) => {
     } else {
         var prefix = req.prefix;
     }
-    const helpEmbed = new Discord.MessageEmbed();
-        helpEmbed.setTitle('Help')
-        helpEmbed.setDescription('The simple yet powerful open source discord bot!');
-        helpEmbed.addField('Commands', `${prefix}ping\n${prefix}prefix\n${prefix}server`, true);
-        helpEmbed.addField('Admin', `${prefix}setprefix`, true);
-        helpEmbed.setColor(colors.info);
-    message.channel.send(helpEmbed);
+    message.channel.send(`**Help**\nThe simple yet powerful open source discord bot!\n\n\n\n${prefix}ping\n${prefix}prefix\n${prefix}server\n\n**Admin**\n${prefix}setprefix`);
 }
 
 module.exports.help = {
