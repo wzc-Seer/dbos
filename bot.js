@@ -5,6 +5,9 @@ const bot = new Discord.Client();
 var botStatus = config.bot.status.mode;
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
+const GuildModel = require('./models/Guild')
+const { connect } = require('mongoose');
+
 bot.on('ready', async () => {
     console.log('MAIN SHARD ONLINE\n-------------------------')
     if(config.bot.commandLogging == true){
@@ -17,6 +20,13 @@ bot.on('ready', async () => {
     } else {
         console.log('Message logging is not enabled!')
     }
+    console.log('----[DATA CONFIGURATING]----');
+    await connect(config.db.mongodb, {
+        useNewUrlParser: true,
+        useFindAndModify: false,
+        useUnifiedTopology: true
+    });
+    console.log('FINISHED!')
     console.log('----[STARTING SHARDS]----')
     bot.user.setStatus(botStatus);
     function StartShards() {
@@ -45,11 +55,20 @@ bot.on("message", async message => {
     if(config.bot.messageLogging == true){console.log('ML -> [' + message.guild.name + '] -> ' + messageAuthor + ': ' + message.content)}
     if(message.channel.type === "dm") return;
     if(message.author.bot) return;
-    if(!message.content.startsWith(config.bot.prefix)) return;
-    let args = message.content.slice(config.bot.prefix.length).trim().split(/ +/g);
+    const req = await GuildModel.findOne({ id: message.guild.id })
+    if(!req){
+        const init = new GuildModel({ id: message.guild.id })
+        await init.save();
+
+        const oprix = config.bot.prefix;
+    } else {
+        var oprix = req.prefix;
+    }
+    if(!message.content.startsWith(oprix)) return;
+    let args = message.content.slice(oprix.length).trim().split(/ +/g);
     let cmd;
     cmd = args.shift().toLocaleLowerCase();
-    let commandfile = bot.commands.get(cmd.slice(config.bot.prefix.length));
+    let commandfile = bot.commands.get(cmd.slice(oprix.length));
     if(commandfile) commandfile.run(bot, message, args);
     if(config.bot.commandLogging == true){console.log('CL ->' + message.content + ' command used in: [' + message.guild.name + '] - By: ' + messageAuthor)}
     if(bot.commands.has(cmd)) {
