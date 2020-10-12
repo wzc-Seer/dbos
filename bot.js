@@ -42,7 +42,7 @@ bot.on('ready', async () => {
 })
 bot.on("message", async message => {
     var messageAuthor = message.member.user.tag;
-    if(config.bot.messageLogging == true){console.log('[' + message.guild.name + '] -> ' + messageAuthor + ': ' + message.content)}
+    if(config.bot.messageLogging == true){console.log('ML -> [' + message.guild.name + '] -> ' + messageAuthor + ': ' + message.content)}
     if(message.channel.type === "dm") return;
     if(message.author.bot) return;
     if(!message.content.startsWith(config.bot.prefix)) return;
@@ -51,7 +51,7 @@ bot.on("message", async message => {
     cmd = args.shift().toLocaleLowerCase();
     let commandfile = bot.commands.get(cmd.slice(config.bot.prefix.length));
     if(commandfile) commandfile.run(bot, message, args);
-    if(config.bot.commandLogging == true){console.log(message.content + ' command used in: [' + message.guild.name + '] - By: ' + messageAuthor)}
+    if(config.bot.commandLogging == true){console.log('CL ->' + message.content + ' command used in: [' + message.guild.name + '] - By: ' + messageAuthor)}
     if(bot.commands.has(cmd)) {
         command = bot.commands.get(cmd);
     } else if (bot.aliases.has(cmd)) {
