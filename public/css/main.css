@@ -18,3 +18,51 @@ a {
 .title {
     text-align: center;
 }
+/* Buttons */
+.roundedButton {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: var(--font) !important;
+    background-color: var(--font);
+    border: 1px solid transparent;
+    border-color: var(--font);
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    user-select: none;
+    text-decoration: none;
+    opacity: 1;
+}
+.roundedButton > img,
+.roundedButton > svg {
+    width: 1em;
+    height: 1em;
+    object-fit: contain;
+    margin-right: 10px;
+    transform: scale(1.25);
+}
+.roundedButton.bold {
+    font-weight: 700;
+}
+.roundedButton.big {
+    font-size: 1.15em;
+}
+.roundedButton.caps {
+    text-transform: uppercase;
+}
+.roundedButton:hover {
+    color: #fff;
+}
+.roundedButton.accentColor1 {
+    border-color: var(--accent);
+    background-color: var(--accent);
+    color: hsl(var(--font));
+}
+.roundedButton.accentColor1:hover {
+    background-color: #3d8adb;
+    color: hsl(var(--font));
+}

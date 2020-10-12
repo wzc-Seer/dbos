@@ -1,10 +1,13 @@
 {
 	"bot": {
-		"prefix": "t!",
+		"prefix": "db!",
 		"token": "BOT TOKEN",
 		"id": "BOT ID",
 		"commandLogging": true,
-		"messageLogging": true
+		"messageLogging": true,
+		"status": {
+			"mode": "dnd"
+		}
 	},
 	"server": {
 		"invite": "TJY6Xyg"
@@ -12,4 +15,3 @@
 	  "siteUrl": "https://localhost",
 	  "port": "3000"
 }
-

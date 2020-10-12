@@ -1,6 +1,5 @@
 const express = require("express");
 const fs = require("fs");
-const discordBotkit = require("botkit-discord");
 var Client = require("uptime-robot");
 const config = require("./config.json");
 const app = express();

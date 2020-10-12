@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const discordBotkit = require("botkit-discord");
 const discordBot = require("./bot");
 const Config = require('./config.json');
 
