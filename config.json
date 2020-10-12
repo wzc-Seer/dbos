@@ -1,0 +1,15 @@
+{
+	"bot": {
+		"prefix": "t!",
+		"token": "NjY4ODQzMzA3MzI5MTI2NDEw.XiXK3g.i79bhK3Sveg8-zENsY57V1jlFxs",
+		"id": "668843307329126410",
+		"commandLogging": true,
+		"messageLogging": true
+	},
+	"server": {
+		"invite": "TJY6Xyg"
+	},
+	  "siteUrl": "https://localhost",
+	  "port": "3000"
+}
+

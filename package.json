@@ -1,21 +1,38 @@
 {
-  "name": "brickbot",
-  "version": "1.0.0",
-  "description": "",
+  "name": "dbot-template-main",
+  "version": "0.0.1",
+  "description": "A simple discord bot + website!",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "author": "Gummeh",
-  "license": "ISC",
   "dependencies": {
-    "@dxy_seer/easydiscord": "^0.1.4",
+    "ansi-regex": "^2.1.1",
+    "array-back": "^3.1.0",
     "botkit-discord": "^0.1.3",
     "discord.js": "^12.3.1",
     "express": "^4.17.1",
-    "fs": "^0.0.2",
-    "minimist": "^1.2.5",
+    "fs": "0.0.1-security",
     "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.4",
     "uptime-robot": "^1.3.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dxy-Seer/dbot-template.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "website",
+    "node.js"
+  ],
+  "author": "Seer#6054",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dxy-Seer/dbot-template/issues"
+  },
+  "homepage": "https://github.com/dxy-Seer/dbot-template#readme"
 }

@@ -1,6 +1,15 @@
 {
-	"prefix": "!",
-	"token": "",
-  "siteUrl": ""
+	"bot": {
+		"prefix": "t!",
+		"token": "BOT TOKEN",
+		"id": "BOT ID",
+		"commandLogging": true,
+		"messageLogging": true
+	},
+	"server": {
+		"invite": "TJY6Xyg"
+	},
+	  "siteUrl": "https://localhost",
+	  "port": "3000"
 }
 
