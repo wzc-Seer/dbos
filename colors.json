@@ -1,0 +1,6 @@
+{
+    "error": "#FF0400",
+    "success": "#1CFF00",
+    "info": "#00B8FF",
+    "danger": "#FF9600"
+}
