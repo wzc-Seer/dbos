@@ -8,7 +8,8 @@
 		"messageLogging": true,
 		"status": {
 			"mode": "dnd"
-		}
+		},
+		"ver": "0.0.0"
 	},
 	"server": {
 		"invite": "TJY6Xyg"

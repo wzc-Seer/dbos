@@ -14,7 +14,20 @@ module.exports.run = async (bot, message, args) => {
     } else {
         var prefix = req.prefix;
     }
-     message.channel.send(`**Help**\nThe simple yet powerful open source discord bot!\n\n\n\n${prefix}ping\n${prefix}prefix\n${prefix}server\n\n**Admin**\n${prefix}setprefix`);
+     const helpEmbed = new Discord.MessageEmbed()
+            .setColor(colors.info)
+            .setTitle('**Help**')
+            .setURL(config.siteUrl)
+            .setDescription('The simple yet powerful open source discord bot!')
+            .setThumbnail('https://github.com/dxy-Seer/dbos/blob/main/public/img/logo.PNG?raw=true')
+            .addFields(
+                { name: '**Fun**', value: `${prefix}ping\n${prefix}prefix\n${prefix}server`, inline: true },
+                { name: '**Admin**', value: `${prefix}setprefix`, inline: true },
+            )
+            .setTimestamp()
+            .setFooter('DBOS - The simple yet powerful open source bot!', 'https://github.com/dxy-Seer/dbos/blob/main/public/img/logo.PNG?raw=true');
+ 
+    message.channel.send(helpEmbed);
 }
 
 module.exports.help = {
