@@ -4,7 +4,7 @@ body {
     background-attachment: fixed;
     font-family: Whitney-Semibold Regular,Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
     color: white;
-}
+} /*https://github.com/dxy-Seer/dbot-template*/
 h1 {
     margin: 10px 0;
     font-size: 56px !important;
@@ -14,9 +14,15 @@ h1 {
 a {
     text-decoration: none;
     color: var(--primary);
-}
+} 
 .title {
     text-align: center;
+}
+.title img {
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    background: radial-gradient(circle,var(--bg-2) 0,var(--bg-1) 100%)!important;
 }
 /* Buttons */
 .roundedButton {
@@ -60,11 +66,21 @@ a {
 .roundedButton.accentColor1 {
     border-color: var(--accent);
     background-color: var(--accent);
-    color: hsl(var(--font));
+    color: var(--color);
 }
 .roundedButton.accentColor1:hover {
     background-color: #3d8adb;
-    color: hsl(var(--font));
+    color: var(--color);
+}
+.roundedButton.github {
+    transition: .5s;
+    border-color: #6640c0;
+    background: radial-gradient(circle,#6e5494 0,#4078c0 100%)!important;
+    color: var(--color);
+}
+.roundedButton.github:hover {
+    background: radial-gradient(circle,#4078c0 0,#6e5494 100%)!important;
+    color: var(--color);
 }
 .content {
     text-align: center;
