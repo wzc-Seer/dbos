@@ -3,7 +3,6 @@ const router = express.Router();
 const discordBot = require("./bot");
 const Config = require('./config.json');
 const Discord = require("discord.js");
-const Strategy = require("passport-discord").Strategy;
 
 router.get("/api/domain", function(request, response) {
     let domain = Config.siteUrl;
