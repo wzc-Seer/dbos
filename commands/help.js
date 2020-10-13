@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     } else {
         var prefix = req.prefix;
     }
-    message.channel.send(`**Help**\nThe simple yet powerful open source discord bot!\n\n\n\n${prefix}ping\n${prefix}prefix\n${prefix}server\n\n**Admin**\n${prefix}setprefix`);
+     message.channel.send(`**Help**\nThe simple yet powerful open source discord bot!\n\n\n\n${prefix}ping\n${prefix}prefix\n${prefix}server\n\n**Admin**\n${prefix}setprefix`);
 }
 
 module.exports.help = {

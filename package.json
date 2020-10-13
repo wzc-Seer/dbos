@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "A simple discord bot + website!",
   "main": "server.js",
+  "engines" : { "node" : "14.13.1" },
   "dependencies": {
     "ansi-regex": "^2.1.1",
     "array-back": "^3.1.0",

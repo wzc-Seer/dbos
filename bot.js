@@ -7,7 +7,7 @@ bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 const GuildModel = require('./models/Guild')
 const { connect } = require('mongoose');
-
+var botActivity = config.bot.status.activity;
 bot.on('ready', async () => {
     console.log('MAIN SHARD ONLINE\n-------------------------')
     if(config.bot.commandLogging == true){
@@ -49,6 +49,9 @@ bot.on('ready', async () => {
         })
     }
     setTimeout(StartShards, 3000);
+    setTimeout(()=>{
+        bot.user.setActivity(botActivity);
+    }, 4000);
 })
 bot.on("message", async message => {
     var messageAuthor = message.member.user.tag;

@@ -23,7 +23,7 @@ router.get("/s/join", function(request, response){
     response.redirect('https://discord.gg/invite/' + serverInv)
 });
 router.get("/api/git", function(request, response){
-  response.redirect('https://github.com/dxy-Seer/dbot-template/');
+  response.redirect('https://github.com/dxy-Seer/dbos/');
 });
 router.get("/api/bot", async function(request, response) {
     let authURL;
