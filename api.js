@@ -2,6 +2,15 @@ const express = require("express");
 const router = express.Router();
 const discordBot = require("./bot");
 const Config = require('./config.json');
+const url = require("url");
+const ejs = require("ejs");
+const path = require("path");
+const passport = require("passport");
+const session = require("express-session");
+const bodyParser = require("body-parser");
+const Discord = require("discord.js");
+const Strategy = require("passport-discord").Strategy;
+const MemoryStore = require("memorystore")(session);
 
 router.get("/api/domain", function(request, response) {
     let domain = Config.siteUrl;
@@ -41,5 +50,7 @@ router.get("/api/bot", async function(request, response) {
       uptime: uptime
   });
 });
-  console.log('------------[ACTIVATING]-------------\nSHARD: api.js ONLINE - This is a standalone shard!\n-------------------------')
+
+
+console.log('------------[ACTIVATING]-------------\nSHARD: api.js ONLINE - This is a standalone shard!\n-------------------------')
 module.exports = router;

@@ -66,3 +66,6 @@ a {
     background-color: #3d8adb;
     color: hsl(var(--font));
 }
+.content {
+    text-align: center;
+}

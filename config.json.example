@@ -1,8 +1,9 @@
 {
 	"bot": {
-		"prefix": "db!",
+		"prefix": "?",
 		"token": "BOT TOKEN",
-		"id": "BOT ID",
+		"secret": "CLIENT SECRET",
+		"id": "CLIENT ID",
 		"commandLogging": true,
 		"messageLogging": true,
 		"status": {
@@ -12,9 +13,9 @@
 	"server": {
 		"invite": "TJY6Xyg"
 	},
-	  "siteUrl": "https://localhost",
+	  "siteUrl": "SITE URL",
 	  "port": "3000",
 	  "db": {
-		  "mongodb": "MONGODB URL"
+		  "mongodb": "MONGODB"
 	  }
 }
