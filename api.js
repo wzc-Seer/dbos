@@ -70,7 +70,7 @@ router.get('/api/all/info', async function(req, res){
   let ID = Config.bot.id;
   let ownerName = Config.owner;
   let port = Config.port;
-  let authURL = domain + ':' + port + '/inv/bot';
+  let authURL = domain + '/inv/bot';
 
   res.render(__dirname + "/views/api/info.ejs", {
     SiteName: Config.siteName,
