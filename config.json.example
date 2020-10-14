@@ -20,5 +20,6 @@
 	  "db": {
 		  "mongodb": "MONGODB"
 	  },
+	  "siteName": "DBOS",
       "owner": "Seer#6054"
 }
