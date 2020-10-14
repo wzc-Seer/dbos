@@ -24,6 +24,158 @@ a {
     border-radius: 10px;
     background: radial-gradient(circle,var(--bg-2) 0,var(--bg-1) 100%)!important;
 }
+.title img.alive{
+    background-color: #ff0000;
+    -webkit-box-shadow: inset 0px 0px 6px -1px hsla(0, 80%, 40%, 1);
+    -moz-box-shadow: inset 0px 0px 6px -1px hsla(0, 80%, 40%, 1);
+    -o-box-shadow: inset 0px 0px 6px -1px hsla(0, 80%, 40%, 1);
+    box-shadow: inset 0px 0px 6px -1px hsla(0, 80%, 40%, 1);
+    opacity: 1;
+    -webkit-animation: header_NotificationCircle_ANIM 1.0s infinite ease-in-out;
+    -moz-animation: header_NotificationCircle_ANIM 1.0s infinite ease-in-out;
+    -o-animation: header_NotificationCircle_ANIM 1.0s infinite ease-in-out;
+    animation: header_NotificationCircle_ANIM 1.0s infinite ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.title img.error{
+    background-color: #ff0000;
+    -webkit-box-shadow: inset 0px 0px 6px -1px hsla(0, 80%, 40%, 1);
+    -moz-box-shadow: inset 0px 0px 6px -1px hsla(0, 80%, 40%, 1);
+    -o-box-shadow: inset 0px 0px 6px -1px hsla(0, 80%, 40%, 1);
+    box-shadow: inset 0px 0px 6px -1px hsla(0, 80%, 40%, 1);
+    opacity: 1;
+    -webkit-animation: header_NotificationCircle_ANIM_err 1.0s infinite ease-in-out;
+    -moz-animation: header_NotificationCircle_ANIM_err 1.0s infinite ease-in-out;
+    -o-animation: header_NotificationCircle_ANIM_err 1.0s infinite ease-in-out;
+    animation: header_NotificationCircle_ANIM_err 1.0s infinite ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.title img.api{
+    background-color: #1CFF00;
+    -webkit-box-shadow: inset 0px 0px 6px -1px #1CFF00;
+    -moz-box-shadow: inset 0px 0px 6px -1px #1CFF00;
+    -o-box-shadow: inset 0px 0px 6px -1px #1CFF00;
+    box-shadow: inset 0px 0px 6px -1px #1CFF00;
+    opacity: 1;
+    -webkit-animation: header_NotificationCircle_ANIM_api 1.0s infinite ease-in-out;
+    -moz-animation: header_NotificationCircle_ANIM_api 1.0s infinite ease-in-out;
+    -o-animation: header_NotificationCircle_ANIM_api 1.0s infinite ease-in-out;
+    animation: header_NotificationCircle_ANIM_api 1.0s infinite ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+@-webkit-keyframes header_NotificationCircle_ANIM_api {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 #1CFF00;
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px hsla(0, 80%, 40%, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 hsla(0, 80%, 40%, 0);
+    }
+  }
+  @keyframes header_NotificationCircle_ANIM_api {
+    0% {
+      -moz-box-shadow: 0 0 0 0 #1CFF00;
+      box-shadow: 0 0 0 0 #1CFF00;
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px hsla(0, 80%, 40%, 0);
+        box-shadow: 0 0 0 10px hsla(0, 80%, 40%, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 hsla(0, 80%, 40%, 0);
+        box-shadow: 0 0 0 0 hsla(0, 80%, 40%, 0);
+    }
+  }
+@-webkit-keyframes header_NotificationCircle_ANIM_err {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 hsla(0, 80%, 40%, 0.8);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px hsla(0, 80%, 40%, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 hsla(0, 80%, 40%, 0);
+    }
+  }
+  @keyframes header_NotificationCircle_ANIM_err {
+    0% {
+      -moz-box-shadow: 0 0 0 0 hsla(0, 80%, 40%, 0.8);
+      box-shadow: 0 0 0 0 hsla(0, 80%, 40%, 0.8);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px hsla(0, 80%, 40%, 0);
+        box-shadow: 0 0 0 10px hsla(0, 80%, 40%, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 hsla(0, 80%, 40%, 0);
+        box-shadow: 0 0 0 0 hsla(0, 80%, 40%, 0);
+    }
+  }
+  @-webkit-keyframes header_NotificationCircle_ANIM {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 hsla(0, 80%, 40%, 0.8);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px hsla(0, 80%, 40%, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 hsla(0, 80%, 40%, 0);
+    }
+  }
+  @keyframes header_NotificationCircle_ANIM {
+    0% {
+      -moz-box-shadow: 0 0 0 0 #49a1ff;
+      box-shadow: 0 0 0 0 #49a1ff;
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px hsla(0, 80%, 40%, 0);
+        box-shadow: 0 0 0 10px hsla(0, 80%, 40%, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 hsla(0, 80%, 40%, 0);
+        box-shadow: 0 0 0 0 hsla(0, 80%, 40%, 0);
+    }
+  }
+/* @-webkit-keyframes header_NotificationCircle_ANIM {
+    0%, 40%, 80%, 100% {
+      -webkit-transform: scale(1.5);
+    } 20%, 60% {
+      -webkit-transform: scale(1);
+    }
+  }
+  @-moz-keyframes header_NotificationCircle_ANIM {
+    0%, 40%, 80%, 100% {
+      -moz-transform: scale(1.5);
+    } 20%, 60% {
+      -moz-transform: scale(1);
+    }
+  }
+  @-o-keyframes header_NotificationCircle_ANIM {
+    0%, 40%, 80%, 100% {
+      -o-transform: scale(1.5);
+    } 20%, 60% {
+      -o-transform: scale(1);
+    }
+  }
+  @keyframes header_NotificationCircle_ANIM {
+    0%, 40%, 80%, 100% {
+      transform: scale(1);
+    } 20%, 60% {
+      transform: scale(1.5);
+    }
+  }  */
+  
 /* Buttons */
 .roundedButton {
     display: inline-block;
@@ -84,4 +236,22 @@ a {
 }
 .content {
     text-align: center;
+}
+.dbtn {
+    background: #7289DA;
+    padding: 0 20px;
+    line-height: 35px;
+    color: #fff;
+    font-family: 'Helvetica', 'Arial', sans-sefir;
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+    border-radius: 3px;
+}
+.container {
+    display: flex;
+    width: 100%;
+    padding: 40px 0;
+    align-items: center;
+    justify-content: center;
 }

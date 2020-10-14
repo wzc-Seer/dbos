@@ -1,15 +1,18 @@
 {
-  "name": "dbot-template-main",
-  "version": "0.0.2",
-  "description": "A simple discord bot + website!",
+  "name": "dbos",
+  "version": "0.0.3.a",
+  "description": "The powerful open source discord bot!",
   "main": "server.js",
-  "engines" : { "node" : "12.x" },
+  "engines": {
+    "node": "12.x"
+  },
   "dependencies": {
     "ansi-regex": "^2.1.1",
     "array-back": "^3.1.0",
     "body-parser": "^1.19.0",
     "botkit-discord": "^0.1.3",
     "btoa": "^1.2.1",
+    "cookie-parser": "^1.4.5",
     "cookies": "^0.8.0",
     "disco-oauth": "^4.2.7",
     "discord.js": "^12.3.1",
@@ -19,6 +22,7 @@
     "fs": "0.0.1-security",
     "memorystore": "^1.6.2",
     "mongoose": "^5.10.9",
+    "morgan": "~1.9.1",
     "node-fetch": "^2.6.1",
     "nodemon": "^2.0.4",
     "passport": "^0.4.1",

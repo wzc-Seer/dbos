@@ -1,10 +1,15 @@
+const Cookies = require("cookies");
 const express = require("express");
 const fs = require("fs");
 var Client = require("uptime-robot");
+const cookieParser = require('cookie-parser');
 const config = require("./config.json");
 const app = express();
 var varPORT = config.port || 3000;
 app.use(express.static("public"));
+app.set('view engine', 'ejs');
+app.use(Cookies.express());
+app.use(cookieParser());
 if(config.server.invite == ''){
   console.log('ERROR -> You need to input a server invite code, example: TJY6Xyg\nStopping process.');
 } else if(config.siteUrl == ''){
@@ -26,6 +31,7 @@ if(config.server.invite == ''){
 );
 app.use(require("./err.js"));
 app.use(require("./api.js"));
+app.use(require("./api.oauth.js"));
 app.use(require("./guides"));
 const listener = app.listen(varPORT, function() {
   console.log("Site online on the address: " + config.siteUrl + ":" + varPORT + "\n-------------------------");

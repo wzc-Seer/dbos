@@ -7,7 +7,8 @@
 		"commandLogging": true,
 		"messageLogging": true,
 		"status": {
-			"mode": "dnd"
+			"mode": "dnd",
+            "activity": "dbt.help"
 		},
 		"ver": "0.0.0"
 	},
@@ -18,5 +19,6 @@
 	  "port": "3000",
 	  "db": {
 		  "mongodb": "MONGODB"
-	  }
+	  },
+      "owner": "Seer#6054"
 }

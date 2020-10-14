@@ -63,5 +63,37 @@ router.get("/api/b/version", async function(request, response) {
 });
 });
 
+router.get('/api/all/info', async function(req, res){
+ 
+  let domain = Config.siteUrl;
+  let uptime = process.uptime();
+  let ID = Config.bot.id;
+  let ownerName = Config.owner;
+  let port = Config.port;
+  let authURL = domain + ':' + port + '/inv/bot';
+
+  res.render(__dirname + "/views/api/info.ejs", {
+    uptime: uptime,
+    invite: authURL,
+    domain: domain,
+    port: port,
+    id: ID,
+    owner: ownerName
+  });
+});
+
+router.get('/inv/bot', async function(req, res){
+  let authURL;
+  try {
+    authURL =
+      "https://discordapp.com/api/oauth2/authorize?client_id=" +
+      Config.bot.id +
+      "&permissions=8&scope=bot";
+  } catch (e) {
+    console.error(e);
+  }
+  res.redirect(authURL)
+});
+
 console.log('------------[ACTIVATING]-------------\nSHARD: api.js ONLINE - This is a standalone shard!\n-------------------------')
 module.exports = router;

@@ -73,7 +73,7 @@ bot.on("message", async message => {
     cmd = args.shift().toLocaleLowerCase();
     let commandfile = bot.commands.get(cmd.slice(oprix.length));
     if(commandfile) commandfile.run(bot, message, args);
-    if(config.bot.commandLogging == true){console.log('CL ->' + message.content + ' command used in: [' + message.guild.name + '] - By: ' + messageAuthor)}
+    if(config.bot.commandLogging == true){console.log('CL -> ' + message.content + ' command used in: [' + message.guild.name + '] - By: ' + messageAuthor)}
     if(bot.commands.has(cmd)) {
         command = bot.commands.get(cmd);
     } else if (bot.aliases.has(cmd)) {
@@ -85,4 +85,11 @@ bot.on("message", async message => {
         return;
     }
 })
+
+function botUsers(){
+    return bot.users.cache.size;
+}
+function botServers(){
+    return bot.guilds.cache.size;
+}
 bot.login(config.bot.token);
