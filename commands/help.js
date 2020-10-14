@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
             .setThumbnail('https://github.com/dxy-Seer/dbos/blob/main/public/img/logo.PNG?raw=true')
             .addFields(
                 { name: '**Fun**', value: `${prefix}ping\n${prefix}prefix\n${prefix}server`, inline: true },
-                { name: '**Admin**', value: `${prefix}setprefix`, inline: true },
+                { name: '**Admin**', value: `${prefix}setprefix\n${prefix}kick\n${prefix}clear`, inline: true },
             )
             .setTimestamp()
             .setFooter('DBOS - The simple yet powerful open source bot!', 'https://github.com/dxy-Seer/dbos/blob/main/public/img/logo.PNG?raw=true');
